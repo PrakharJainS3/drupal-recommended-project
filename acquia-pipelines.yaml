@@ -31,13 +31,11 @@ events:
       - composer_setup:
           type: script
           script:
-            - echo "variables - $COMPOSER_BIN $SIMPLETEST_BASE_URL $API_KEY"
-            - composer install --no-interaction
-            - mysql -u root -proot -e "CREATE DATABASE drupal"
+            - composer --version
       - deploy:
           type: deploy
           script:
-            - echo "Deploying to Acquia..."
+            - echo "Running deployment script"
             - chmod +x ./deploy-artifact.sh
             - ./deploy-artifact.sh
   post-deploy:
