@@ -44,7 +44,8 @@ events:
       - deploy_to_acquia:
           type: deploy
           script:
-            -
+            - echo "Deploying to Acquia"
+            # Add your actual deployment commands here
       - sync_databases:
           type: script
           script:
