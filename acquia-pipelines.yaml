@@ -27,3 +27,4 @@ events:
           type: script
           script:
             - echo "Database sync completed"
+            - exit 1
