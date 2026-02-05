@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-set -ev
+set +e
 return 1
-set +v
