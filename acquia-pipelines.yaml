@@ -10,9 +10,9 @@ events:
           type: script
           script:
             - echo "Build Executed"
-post-deploy:
-  steps:
-    - setup:
-        type: script
-        script:
-         - source $SOURCE_DIR/setup.sh
+  post-deploy:
+    steps:
+      - setup:
+          type: script
+          script:
+           - source $SOURCE_DIR/setup.sh
