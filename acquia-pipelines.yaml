@@ -6,25 +6,7 @@ services:
 events:
   build:
     steps:
-      - composer_setup:
+      - setup:
           type: script
           script:
-            - composer --version
-            - openssl version
-            - sleep 5
-      - deploy:
-          type: deploy
-          script:
-            - echo "Running deployment script"
-            - sleep 5
-  post-deploy:
-    steps:
-      - deploy_to_acquia:
-          type: deploy
-          script:
-            - echo "Deploying to Acquia"
-      - sync_databases:
-          type: script
-          script:
-            - echo "Database sync completed"
-            - exit 1
+            - source $SOURCE_DIR/setup.sh
