@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -ev
-return 2
+return 1
 set +v
